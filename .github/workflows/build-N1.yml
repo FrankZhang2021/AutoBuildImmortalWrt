@@ -259,16 +259,17 @@ jobs:
 
       - name: Package armsr-armv8 as ImmortalWrt for N1
         uses: wukongdaily/flippy-openwrt-actions@master
-        if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
+        if: ${{ !cancelled() && steps.find_rootfs.outputs.file != '' }}
         env:
           OPENWRT_ARMVIRT: ${{ steps.find_rootfs.outputs.file }}
           PACKAGE_SOC: s905d
-          KERNEL_VERSION_NAME: ${{ inputs.openwrt_kernel }}
+          KERNEL_VERSION_NAME: ${{ github.event.inputs.openwrt_kernel }}
           KERNEL_AUTO_LATEST: false
-          WHOAMI: ${{ inputs.builder_name }}
+          WHOAMI: ${{ github.event.inputs.builder_name }}
 
       - name: Rename .img.gz file
         id: rename
+        if: ${{ !cancelled() && env.PACKAGED_OUTPUTPATH != '' }}
         run: |
           FILE=$(ls ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz | head -n1)
           echo "Image file is: $FILE"
@@ -287,6 +288,7 @@ jobs:
 
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
+        if: ${{ !cancelled() && env.PACKAGED_OUTPUTPATH != '' }}
         with:
           tag_name: phicomm-n1
           name: ImmortalWrt for Phicomm N1
