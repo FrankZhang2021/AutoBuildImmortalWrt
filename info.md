@@ -1,4 +1,3 @@
-[![Github](https://img.shields.io/badge/Release文件可在国内加速站下载-FC7C0D?logo=github&logoColor=fff&labelColor=000&style=for-the-badge)](https://wkdaily.cpolar.top/archives/1) 
-#### 固件地址 `192.168.100.1`
-#### 用户名 `root` 密码：无
-#### 默认软件包大小 1GB 
+#### 平台: N1 (Phicomm N1)
+#### 用户名 `root` 密码: `password`
+#### 单网口默认 DHCP 模式，请在上级路由器查询分配地址

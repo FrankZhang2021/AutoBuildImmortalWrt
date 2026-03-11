@@ -1,0 +1,849 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+========================================
+Updating repositories.conf
+========================================
+## Remote package repositories
+src/gz immortalwrt_core https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages
+src/gz immortalwrt_base https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base
+src/gz immortalwrt_kmods https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442
+src/gz immortalwrt_luci https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci
+src/gz immortalwrt_packages https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages
+src/gz immortalwrt_routing https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/routing
+src/gz immortalwrt_telephony https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/telephony
+
+## This is the local package repository, do not remove!
+src imagebuilder file:packages
+
+option check_signature
+第三方软件包: 
+Building for profile: generic
+Building for ROOTFS_PARTSIZE: 1024
+2026-03-11 03:24:44 - 开始构建arm64的rootfs.tar.gz
+🔄 正在同步第三方软件仓库 Cloning run file repo...
+Cloning into '/tmp/store-run-repo'...
+✅ Run files copied to extra-packages:
+-rw-r--r-- 1 root root  11M Mar 11 03:25 /home/build/immortalwrt/extra-packages/AdGuardHome_v0.107.72_aarch64.run
+-rw-r--r-- 1 root root  12M Mar 11 03:25 /home/build/immortalwrt/extra-packages/luci-app-homeproxy-25.197.30224-af6a147_aarch64_cortex-a53.run
+-rw-r--r-- 1 root root 218K Mar 11 03:25 /home/build/immortalwrt/extra-packages/luci-app-store-0.1.32-1_all.run
+-rw-r--r-- 1 root root 1.1M Mar 11 03:25 /home/build/immortalwrt/extra-packages/luci-app-uninstall-v1.2.0.run
+-rw-r--r-- 1 root root 111K Mar 11 03:25 /home/build/immortalwrt/extra-packages/momo_v1.1.0_aarch64_cortex-a53.run
+-rw-r--r-- 1 root root  12M Mar 11 03:25 /home/build/immortalwrt/extra-packages/mosdns_v5.3.4-r1_aarch64_cortex-a53.run
+-rw-r--r-- 1 root root  12M Mar 11 03:25 /home/build/immortalwrt/extra-packages/nikki_v1.25.2_aarch64_cortex-a53.run
+-rw-r--r-- 1 root root  57M Mar 11 03:25 /home/build/immortalwrt/extra-packages/passwall2_aarch64_a53_26.1.16-1.run
+-rw-r--r-- 1 root root  45M Mar 11 03:25 /home/build/immortalwrt/extra-packages/passwall_aarch64_a53_26.2.6-1.run
+-rw-r--r-- 1 root root  52M Mar 11 03:25 /home/build/immortalwrt/extra-packages/ssrp_aarch64_cortex-a53-190_r126.run
+🧩 解压 extra-packages/AdGuardHome_v0.107.72_aarch64.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    38%    77%  100%   MD5 checksums are OK. All good.
+Uncompressing by wukongdaily github action...
+     0%    38%    77%  100%  
+🧩 解压 extra-packages/luci-app-homeproxy-25.197.30224-af6a147_aarch64_cortex-a53.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    35%    71%  100%   MD5 checksums are OK. All good.
+Uncompressing homeproxy aarch64_cortex-a53 Installer v25.197.30224-af6a147     0%    35%    71%  100%  
+🧩 解压 extra-packages/luci-app-store-0.1.32-1_all.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    32%    64%    96%  100%   MD5 checksums are OK. All good.
+Uncompressing iStore Installer v0.1.32-1     0%    32%    64%    96%  100%  
+🧩 解压 extra-packages/luci-app-uninstall-v1.2.0.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    95%  100%   MD5 checksums are OK. All good.
+Uncompressing luci-app-uninstall Installer (23.05.3/x86_64)     0%    95%  100%  
+🧩 解压 extra-packages/momo_v1.1.0_aarch64_cortex-a53.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    70%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%    70%  100%  
+🧩 解压 extra-packages/mosdns_v5.3.4-r1_aarch64_cortex-a53.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    35%    71%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%    35%    71%  100%  
+🧩 解压 extra-packages/nikki_v1.25.2_aarch64_cortex-a53.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%    35%    71%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%    35%    71%  100%  
+🧩 解压 extra-packages/passwall2_aarch64_a53_26.1.16-1.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%     7%    14%    21%    28%    35%    42%    49%    56%    63%    70%    77%    84%    92%    99%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%     7%    14%    21%    28%    35%    42%    49%    56%    63%    70%    77%    84%    92%    99%  100%  
+🧩 解压 extra-packages/passwall_aarch64_a53_26.2.6-1.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%     9%    18%    27%    36%    45%    54%    63%    72%    81%    90%    99%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%     9%    18%    27%    36%    45%    54%    63%    72%    81%    90%    99%  100%  
+🧩 解压 extra-packages/ssrp_aarch64_cortex-a53-190_r126.run -> extra-packages/temp-unpack
+Creating directory extra-packages/temp-unpack
+Verifying archive integrity...     0%     7%    15%    23%    30%    38%    46%    54%    61%    69%    77%    85%    92%  100%   MD5 checksums are OK. All good.
+Uncompressing by github action...
+     0%     7%    15%    23%    30%    38%    46%    54%    61%    69%    77%    85%    92%  100%  
+'extra-packages/temp-unpack/mosdns_5.3.3-r4_aarch64_cortex-a53.ipk' -> 'packages/mosdns_5.3.3-r4_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/luci-lib-xterm_4.18.0_all.ipk' -> 'packages/luci-lib-xterm_4.18.0_all.ipk'
+'extra-packages/temp-unpack/luci-app-mosdns_1.6.11-r1_all.ipk' -> 'packages/luci-app-mosdns_1.6.11-r1_all.ipk'
+'extra-packages/temp-unpack/luci-app-store_0.1.32-1_all.ipk' -> 'packages/luci-app-store_0.1.32-1_all.ipk'
+'extra-packages/temp-unpack/luci-i18n-mosdns-zh-cn_25.061.23891.2523534_all.ipk' -> 'packages/luci-i18n-mosdns-zh-cn_25.061.23891.2523534_all.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-sslocal_1.24.0-r14_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-sslocal_1.24.0-r14_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/simple-obfs-client_0.0.5-r3_aarch64_cortex-a53.ipk' -> 'packages/simple-obfs-client_0.0.5-r3_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-local_2.5.6-r11_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-local_2.5.6-r11_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadow-tls_0.2.25-r5_aarch64_cortex-a53.ipk' -> 'packages/shadow-tls_0.2.25-r5_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/trojan-plus_10.0.3-r2_aarch64_cortex-a53.ipk' -> 'packages/trojan-plus_10.0.3-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-ssserver_1.24.0-r1_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-ssserver_1.24.0-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/v2ray-plugin_5.41.0-r10_aarch64_cortex-a53.ipk' -> 'packages/v2ray-plugin_5.41.0-r10_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/microsocks_1.0.5-r1_aarch64_cortex-a53.ipk' -> 'packages/microsocks_1.0.5-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-ssurl_1.24.0-r14_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-ssurl_1.24.0-r14_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/naiveproxy_143.0.7499.109-r2_aarch64_cortex-a53.ipk' -> 'packages/naiveproxy_143.0.7499.109-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/v2ray-geoip_202601080023.1_all.ipk' -> 'packages/v2ray-geoip_202601080023.1_all.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-ssmanager_1.24.0-r14_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-ssmanager_1.24.0-r14_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/tcping_0.3-r1_aarch64_cortex-a53.ipk' -> 'packages/tcping_0.3-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-nat_2.5.6-r6_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-nat_2.5.6-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/dns2socks_2.1-r2_aarch64_cortex-a53.ipk' -> 'packages/dns2socks_2.1-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-local_2.5.6-r6_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-local_2.5.6-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/geoview_0.2.2-r1_aarch64_cortex-a53.ipk' -> 'packages/geoview_0.2.2-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-ssservice_1.24.0-r14_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-ssservice_1.24.0-r14_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/chinadns-ng_2025.08.09-r13_aarch64_cortex-a53.ipk' -> 'packages/chinadns-ng_2025.08.09-r13_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/trojan-plus_10.0.3-r7_aarch64_cortex-a53.ipk' -> 'packages/trojan-plus_10.0.3-r7_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/mosdns_5.3.3-r82_aarch64_cortex-a53.ipk' -> 'packages/mosdns_5.3.3-r82_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/v2ray-geosite_202601152216.1_all.ipk' -> 'packages/v2ray-geosite_202601152216.1_all.ipk'
+'extra-packages/temp-unpack/depends/libudns_0.4-r1_aarch64_cortex-a53.ipk' -> 'packages/libudns_0.4-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/xray-plugin_1.8.24-r1_aarch64_cortex-a53.ipk' -> 'packages/xray-plugin_1.8.24-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/simple-obfs-client_0.0.5-r4_aarch64_cortex-a53.ipk' -> 'packages/simple-obfs-client_0.0.5-r4_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-check_2.5.6-r6_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-check_2.5.6-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/ipt2socks_1.1.4-r3_aarch64_cortex-a53.ipk' -> 'packages/ipt2socks_1.1.4-r3_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadow-tls_0.2.25-r1_aarch64_cortex-a53.ipk' -> 'packages/shadow-tls_0.2.25-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/dns2socks_2.1-r4_aarch64_cortex-a53.ipk' -> 'packages/dns2socks_2.1-r4_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/redsocks2_0.71-r5_aarch64_cortex-a53.ipk' -> 'packages/redsocks2_0.71-r5_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/microsocks_1.0.5-r3_aarch64_cortex-a53.ipk' -> 'packages/microsocks_1.0.5-r3_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/lua-neturl_1.2.1-r4_all.ipk' -> 'packages/lua-neturl_1.2.1-r4_all.ipk'
+'extra-packages/temp-unpack/depends/sing-box_1.12.16-r1_aarch64_cortex-a53.ipk' -> 'packages/sing-box_1.12.16-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/ipt2socks_1.1.4-r2_aarch64_cortex-a53.ipk' -> 'packages/ipt2socks_1.1.4-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/dns2socks-rust_0.2.3-r9_aarch64_cortex-a53.ipk' -> 'packages/dns2socks-rust_0.2.3-r9_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/dns2tcp_1.1.2-r2_aarch64_cortex-a53.ipk' -> 'packages/dns2tcp_1.1.2-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-server_2.5.6-r11_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-server_2.5.6-r11_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/libopenssl3.ipk' -> 'packages/libopenssl3.ipk'
+'extra-packages/temp-unpack/depends/geoview_0.2.3-r1_aarch64_cortex-a53.ipk' -> 'packages/geoview_0.2.3-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/chinadns-ng_2025.08.09-r1_aarch64_cortex-a53.ipk' -> 'packages/chinadns-ng_2025.08.09-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-server_2.5.6-r6_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-server_2.5.6-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-libev-ss-server_3.3.5-r7_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-libev-ss-server_3.3.5-r7_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-ssserver_1.24.0-r14_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-ssserver_1.24.0-r14_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-redir_2.5.6-r11_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-redir_2.5.6-r11_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/hysteria_2.6.5-r9_aarch64_cortex-a53.ipk' -> 'packages/hysteria_2.6.5-r9_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/tuic-client_1.0.0-r3_aarch64_cortex-a53.ipk' -> 'packages/tuic-client_1.0.0-r3_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/v2ray-geoip_202601150021.1_all.ipk' -> 'packages/v2ray-geoip_202601150021.1_all.ipk'
+'extra-packages/temp-unpack/depends/v2ray-plugin_5.43.0-r1_aarch64_cortex-a53.ipk' -> 'packages/v2ray-plugin_5.43.0-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/xray-core_25.12.8-r35_aarch64_cortex-a53.ipk' -> 'packages/xray-core_25.12.8-r35_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/xray-core_25.12.8-r1_aarch64_cortex-a53.ipk' -> 'packages/xray-core_25.12.8-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/hysteria_2.7.0-r1_aarch64_cortex-a53.ipk' -> 'packages/hysteria_2.7.0-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/tcping-simple_1.3.5-r1_aarch64_cortex-a53.ipk' -> 'packages/tcping-simple_1.3.5-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/naiveproxy_140.0.7339.123-r3_aarch64_cortex-a53.ipk' -> 'packages/naiveproxy_140.0.7339.123-r3_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/v2ray-geosite_202601112214.1_all.ipk' -> 'packages/v2ray-geosite_202601112214.1_all.ipk'
+'extra-packages/temp-unpack/depends/xray-core_26.1.13-r1_aarch64_cortex-a53.ipk' -> 'packages/xray-core_26.1.13-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/tcping_0.3-r5_aarch64_cortex-a53.ipk' -> 'packages/tcping_0.3-r5_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/tuic-client_1.0.0-r1_aarch64_cortex-a53.ipk' -> 'packages/tuic-client_1.0.0-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocksr-libev-ssr-redir_2.5.6-r6_aarch64_cortex-a53.ipk' -> 'packages/shadowsocksr-libev-ssr-redir_2.5.6-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/shadowsocks-rust-sslocal_1.24.0-r1_aarch64_cortex-a53.ipk' -> 'packages/shadowsocks-rust-sslocal_1.24.0-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/depends/trojan_1.16.0-r6_aarch64_cortex-a53.ipk' -> 'packages/trojan_1.16.0-r6_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/luci-i18n-nikki-ru_26.061.12721980cc7d_all.ipk' -> 'packages/luci-i18n-nikki-ru_26.061.12721980cc7d_all.ipk'
+'extra-packages/temp-unpack/luci-i18n-homeproxy-zh-cn_25.196.29294-df03cca_all.ipk' -> 'packages/luci-i18n-homeproxy-zh-cn_25.196.29294-df03cca_all.ipk'
+'extra-packages/temp-unpack/main/23.05-24.10_luci-app-passwall_26.2.6-r1_all.ipk' -> 'packages/23.05-24.10_luci-app-passwall_26.2.6-r1_all.ipk'
+'extra-packages/temp-unpack/main/luci-i18n-passwall2-zh-cn_26.1.16_all.ipk' -> 'packages/luci-i18n-passwall2-zh-cn_26.1.16_all.ipk'
+'extra-packages/temp-unpack/main/23.05-24.10_luci-i18n-passwall-zh-cn_26.2.6_all.ipk' -> 'packages/23.05-24.10_luci-i18n-passwall-zh-cn_26.2.6_all.ipk'
+'extra-packages/temp-unpack/main/luci-app-passwall2_26.1.16-r1_all.ipk' -> 'packages/luci-app-passwall2_26.1.16-r1_all.ipk'
+'extra-packages/temp-unpack/taskd_1.0.3-2_all.ipk' -> 'packages/taskd_1.0.3-2_all.ipk'
+'extra-packages/temp-unpack/luci-lib-taskd_1.0.25_all.ipk' -> 'packages/luci-lib-taskd_1.0.25_all.ipk'
+'extra-packages/temp-unpack/luci-app-adguardhome-all.ipk' -> 'packages/luci-app-adguardhome-all.ipk'
+'extra-packages/temp-unpack/momo_2025.12.31-r1_aarch64_cortex-a53.ipk' -> 'packages/momo_2025.12.31-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/luci-i18n-nikki-zh-cn_26.061.12721980cc7d_all.ipk' -> 'packages/luci-i18n-nikki-zh-cn_26.061.12721980cc7d_all.ipk'
+'extra-packages/temp-unpack/luci-app-momo_1.1.0-r1_all.ipk' -> 'packages/luci-app-momo_1.1.0-r1_all.ipk'
+'extra-packages/temp-unpack/v2ray-geosite_2025.03.08-r1_all.ipk' -> 'packages/v2ray-geosite_2025.03.08-r1_all.ipk'
+'extra-packages/temp-unpack/luci-app-ssr-plus_190-r126_all.ipk' -> 'packages/luci-app-ssr-plus_190-r126_all.ipk'
+'extra-packages/temp-unpack/luci-i18n-nikki-zh-tw_26.061.12721980cc7d_all.ipk' -> 'packages/luci-i18n-nikki-zh-tw_26.061.12721980cc7d_all.ipk'
+'extra-packages/temp-unpack/luci-app-uninstall_1.2.0_all.ipk' -> 'packages/luci-app-uninstall_1.2.0_all.ipk'
+'extra-packages/temp-unpack/v2dat_2022.12.15.47b8ee51-r2_aarch64_cortex-a53.ipk' -> 'packages/v2dat_2022.12.15.47b8ee51-r2_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/nikki_2026.02.08-r1_aarch64_cortex-a53.ipk' -> 'packages/nikki_2026.02.08-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/sing-box_1.11.15-r1_aarch64_cortex-a53.ipk' -> 'packages/sing-box_1.11.15-r1_aarch64_cortex-a53.ipk'
+'extra-packages/temp-unpack/v2ray-geoip_2025.03.08-r1_all.ipk' -> 'packages/v2ray-geoip_2025.03.08-r1_all.ipk'
+'extra-packages/temp-unpack/luci-app-nikki_1.25.2-r1_all.ipk' -> 'packages/luci-app-nikki_1.25.2-r1_all.ipk'
+'extra-packages/temp-unpack/luci-i18n-momo-zh-cn_25.363.32311ce1d6a9_all.ipk' -> 'packages/luci-i18n-momo-zh-cn_25.363.32311ce1d6a9_all.ipk'
+'extra-packages/temp-unpack/luci-app-homeproxy_25.197.30224-af6a147_all.ipk' -> 'packages/luci-app-homeproxy_25.197.30224-af6a147_all.ipk'
+👉 Found: extra-packages/luci-app-easytier/luci-app-easytier_2.4.3_all.ipk
+'extra-packages/luci-app-easytier/luci-app-easytier_2.4.3_all.ipk' -> 'packages/luci-app-easytier_2.4.3_all.ipk'
+👉 Found: extra-packages/luci-app-easytier/easytier_2.4.3_aarch64_cortex-a53.ipk
+'extra-packages/luci-app-easytier/easytier_2.4.3_aarch64_cortex-a53.ipk' -> 'packages/easytier_2.4.3_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-easytier/luci-i18n-easytier-zh-cn_git-25.242.01662-2b382e4_all.ipk
+'extra-packages/luci-app-easytier/luci-i18n-easytier-zh-cn_git-25.242.01662-2b382e4_all.ipk' -> 'packages/luci-i18n-easytier-zh-cn_git-25.242.01662-2b382e4_all.ipk'
+👉 Found: extra-packages/docker/docker_27.3.1-r1_aarch64_cortex-a53.ipk
+'extra-packages/docker/docker_27.3.1-r1_aarch64_cortex-a53.ipk' -> 'packages/docker_27.3.1-r1_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-gecoosac/luci-app-gecoosac_2.2-r15_all.ipk
+'extra-packages/luci-app-gecoosac/luci-app-gecoosac_2.2-r15_all.ipk' -> 'packages/luci-app-gecoosac_2.2-r15_all.ipk'
+👉 Found: extra-packages/luci-app-gecoosac/gecoosac_2.2.20250318-r8_aarch64_cortex-a53.ipk
+'extra-packages/luci-app-gecoosac/gecoosac_2.2.20250318-r8_aarch64_cortex-a53.ipk' -> 'packages/gecoosac_2.2.20250318-r8_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-lucky/lucky_2.17.8-r8_aarch64_cortex-a53.ipk
+'extra-packages/luci-app-lucky/lucky_2.17.8-r8_aarch64_cortex-a53.ipk' -> 'packages/lucky_2.17.8-r8_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-lucky/luci-app-lucky_1.2.0-r11_all.ipk
+'extra-packages/luci-app-lucky/luci-app-lucky_1.2.0-r11_all.ipk' -> 'packages/luci-app-lucky_1.2.0-r11_all.ipk'
+👉 Found: extra-packages/watchdog/watchdog_1-r4_aarch64_generic.ipk
+'extra-packages/watchdog/watchdog_1-r4_aarch64_generic.ipk' -> 'packages/watchdog_1-r4_aarch64_generic.ipk'
+👉 Found: extra-packages/watchdog/luci-app-watchdog_1.0.6-r20250717_all.ipk
+'extra-packages/watchdog/luci-app-watchdog_1.0.6-r20250717_all.ipk' -> 'packages/luci-app-watchdog_1.0.6-r20250717_all.ipk'
+👉 Found: extra-packages/watchdog/luci-i18n-watchdog-zh-cn_25.191.07803.ff47685_all.ipk
+'extra-packages/watchdog/luci-i18n-watchdog-zh-cn_25.191.07803.ff47685_all.ipk' -> 'packages/luci-i18n-watchdog-zh-cn_25.191.07803.ff47685_all.ipk'
+👉 Found: extra-packages/aurora/luci-theme-aurora_0.11.0-r20260208_all.ipk
+'extra-packages/aurora/luci-theme-aurora_0.11.0-r20260208_all.ipk' -> 'packages/luci-theme-aurora_0.11.0-r20260208_all.ipk'
+👉 Found: extra-packages/luci-app-unishare/unishare_1.1.0-r6_all.ipk
+'extra-packages/luci-app-unishare/unishare_1.1.0-r6_all.ipk' -> 'packages/unishare_1.1.0-r6_all.ipk'
+👉 Found: extra-packages/luci-app-unishare/webdav2_4.3.1-r4_aarch64_cortex-a53.ipk
+'extra-packages/luci-app-unishare/webdav2_4.3.1-r4_aarch64_cortex-a53.ipk' -> 'packages/webdav2_4.3.1-r4_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-unishare/luci-app-unishare_1.0.0-r4-r3_all.ipk
+'extra-packages/luci-app-unishare/luci-app-unishare_1.0.0-r4-r3_all.ipk' -> 'packages/luci-app-unishare_1.0.0-r4-r3_all.ipk'
+👉 Found: extra-packages/luci-app-advancedplus/luci-i18n-advancedplus-zh-cn_git-25.063.43858-4243994_all.ipk
+'extra-packages/luci-app-advancedplus/luci-i18n-advancedplus-zh-cn_git-25.063.43858-4243994_all.ipk' -> 'packages/luci-i18n-advancedplus-zh-cn_git-25.063.43858-4243994_all.ipk'
+👉 Found: extra-packages/luci-app-advancedplus/luci-app-advancedplus_1.8.3_all.ipk
+'extra-packages/luci-app-advancedplus/luci-app-advancedplus_1.8.3_all.ipk' -> 'packages/luci-app-advancedplus_1.8.3_all.ipk'
+👉 Found: extra-packages/luci-app-turboacc/luci-app-turboacc_26.165.25287-2b9ee02_all.ipk
+'extra-packages/luci-app-turboacc/luci-app-turboacc_26.165.25287-2b9ee02_all.ipk' -> 'packages/luci-app-turboacc_26.165.25287-2b9ee02_all.ipk'
+👉 Found: extra-packages/bandix/luci-app-bandix_0.11.1-r1_all.ipk
+'extra-packages/bandix/luci-app-bandix_0.11.1-r1_all.ipk' -> 'packages/luci-app-bandix_0.11.1-r1_all.ipk'
+👉 Found: extra-packages/bandix/luci-i18n-bandix-zh-cn_25.341.50859.dfcede3_all.ipk
+'extra-packages/bandix/luci-i18n-bandix-zh-cn_25.341.50859.dfcede3_all.ipk' -> 'packages/luci-i18n-bandix-zh-cn_25.341.50859.dfcede3_all.ipk'
+👉 Found: extra-packages/bandix/bandix_0.11.0-r1_aarch64_cortex-a53.ipk
+'extra-packages/bandix/bandix_0.11.0-r1_aarch64_cortex-a53.ipk' -> 'packages/bandix_0.11.0-r1_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/nekobox/luci-app-nekobox_1.9.4-r185_all.ipk
+'extra-packages/nekobox/luci-app-nekobox_1.9.4-r185_all.ipk' -> 'packages/luci-app-nekobox_1.9.4-r185_all.ipk'
+👉 Found: extra-packages/luci-app-quickstart/luci-i18n-quickstart-zh-cn_25.090.31208-f5bf244_all.ipk
+'extra-packages/luci-app-quickstart/luci-i18n-quickstart-zh-cn_25.090.31208-f5bf244_all.ipk' -> 'packages/luci-i18n-quickstart-zh-cn_25.090.31208-f5bf244_all.ipk'
+👉 Found: extra-packages/luci-app-quickstart/quickstart_0.11.13-r1_aarch64_generic.ipk
+'extra-packages/luci-app-quickstart/quickstart_0.11.13-r1_aarch64_generic.ipk' -> 'packages/quickstart_0.11.13-r1_aarch64_generic.ipk'
+👉 Found: extra-packages/luci-app-quickstart/luci-app-quickstart_0.12.4-r1_all.ipk
+'extra-packages/luci-app-quickstart/luci-app-quickstart_0.12.4-r1_all.ipk' -> 'packages/luci-app-quickstart_0.12.4-r1_all.ipk'
+👉 Found: extra-packages/luci-theme-kucat/luci-theme-kucat_2.6.10-r20250720_all.ipk
+'extra-packages/luci-theme-kucat/luci-theme-kucat_2.6.10-r20250720_all.ipk' -> 'packages/luci-theme-kucat_2.6.10-r20250720_all.ipk'
+👉 Found: extra-packages/luci-app-taskplan/luci-app-taskplan_2.2.4_all.ipk
+'extra-packages/luci-app-taskplan/luci-app-taskplan_2.2.4_all.ipk' -> 'packages/luci-app-taskplan_2.2.4_all.ipk'
+👉 Found: extra-packages/luci-app-taskplan/luci-i18n-taskplan-zh-cn_all.ipk
+'extra-packages/luci-app-taskplan/luci-i18n-taskplan-zh-cn_all.ipk' -> 'packages/luci-i18n-taskplan-zh-cn_all.ipk'
+👉 Found: extra-packages/tailscale/luci-i18n-tailscale-zh-cn_250509.33792_all.ipk
+'extra-packages/tailscale/luci-i18n-tailscale-zh-cn_250509.33792_all.ipk' -> 'packages/luci-i18n-tailscale-zh-cn_250509.33792_all.ipk'
+👉 Found: extra-packages/tailscale/luci-app-tailscale_1.2.6_all.ipk
+'extra-packages/tailscale/luci-app-tailscale_1.2.6_all.ipk' -> 'packages/luci-app-tailscale_1.2.6_all.ipk'
+👉 Found: extra-packages/luci-app-amlogic/luci-i18n-amlogic-zh-cn_3.1.259_all.ipk
+'extra-packages/luci-app-amlogic/luci-i18n-amlogic-zh-cn_3.1.259_all.ipk' -> 'packages/luci-i18n-amlogic-zh-cn_3.1.259_all.ipk'
+👉 Found: extra-packages/luci-app-amlogic/luci-app-amlogic_3.1.259_all.ipk
+'extra-packages/luci-app-amlogic/luci-app-amlogic_3.1.259_all.ipk' -> 'packages/luci-app-amlogic_3.1.259_all.ipk'
+👉 Found: extra-packages/libs/libmbedtls21_3.6.3-r1_aarch64_generic.ipk
+'extra-packages/libs/libmbedtls21_3.6.3-r1_aarch64_generic.ipk' -> 'packages/libmbedtls21_3.6.3-r1_aarch64_generic.ipk'
+👉 Found: extra-packages/rtp2httpd/luci-app-rtp2httpd_3.6.2-r1_all.ipk
+'extra-packages/rtp2httpd/luci-app-rtp2httpd_3.6.2-r1_all.ipk' -> 'packages/luci-app-rtp2httpd_3.6.2-r1_all.ipk'
+👉 Found: extra-packages/rtp2httpd/luci-i18n-rtp2httpd-zh-cn_3.6.2_all.ipk
+'extra-packages/rtp2httpd/luci-i18n-rtp2httpd-zh-cn_3.6.2_all.ipk' -> 'packages/luci-i18n-rtp2httpd-zh-cn_3.6.2_all.ipk'
+👉 Found: extra-packages/rtp2httpd/rtp2httpd_3.6.2-r1_aarch64_cortex-a53.ipk
+'extra-packages/rtp2httpd/rtp2httpd_3.6.2-r1_aarch64_cortex-a53.ipk' -> 'packages/rtp2httpd_3.6.2-r1_aarch64_cortex-a53.ipk'
+👉 Found: extra-packages/luci-app-netwizard/luci-i18n-netwizard-zh-cn_25.095.57929.603bfe4_all.ipk
+'extra-packages/luci-app-netwizard/luci-i18n-netwizard-zh-cn_25.095.57929.603bfe4_all.ipk' -> 'packages/luci-i18n-netwizard-zh-cn_25.095.57929.603bfe4_all.ipk'
+👉 Found: extra-packages/luci-app-netwizard/luci-app-netwizard_1.9.2-r20250330_all.ipk
+'extra-packages/luci-app-netwizard/luci-app-netwizard_1.9.2-r20250330_all.ipk' -> 'packages/luci-app-netwizard_1.9.2-r20250330_all.ipk'
+👉 Found: extra-packages/luci-app-partexp/luci-i18n-partexp-zh-cn_25.355.34625.38e15b6_all.ipk
+'extra-packages/luci-app-partexp/luci-i18n-partexp-zh-cn_25.355.34625.38e15b6_all.ipk' -> 'packages/luci-i18n-partexp-zh-cn_25.355.34625.38e15b6_all.ipk'
+👉 Found: extra-packages/luci-app-partexp/luci-app-partexp_2.0.2-r20251221_all.ipk
+'extra-packages/luci-app-partexp/luci-app-partexp_2.0.2-r20251221_all.ipk' -> 'packages/luci-app-partexp_2.0.2-r20251221_all.ipk'
+👉 Found: extra-packages/dufs/dufs_0.45.0-r1_aarch64_generic.ipk
+'extra-packages/dufs/dufs_0.45.0-r1_aarch64_generic.ipk' -> 'packages/dufs_0.45.0-r1_aarch64_generic.ipk'
+✅ 所有 .ipk 文件已整理至 packages/
+total 229M
+drwxr-xr-x 2 root  root    12K Mar 11 03:25 .
+drwxr-xr-x 1 build build  4.0K Mar 11 03:25 ..
+-rw-r--r-- 1 root  root   870K Mar 11 03:25 23.05-24.10_luci-app-passwall_26.2.6-r1_all.ipk
+-rw-r--r-- 1 root  root    17K Mar 11 03:25 23.05-24.10_luci-i18n-passwall-zh-cn_26.2.6_all.ipk
+-rw-r--r-- 1 root  root   1.3M Mar 11 03:25 bandix_0.11.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   264K Mar 11 03:25 chinadns-ng_2025.08.09-r13_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   264K Mar 11 03:25 chinadns-ng_2025.08.09-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root  1007K Mar 11 03:25 dns2socks-rust_0.2.3-r9_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    12K Mar 11 03:25 dns2socks_2.1-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    12K Mar 11 03:25 dns2socks_2.1-r4_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    12K Mar 11 03:25 dns2tcp_1.1.2-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   8.2M Mar 11 03:25 docker_27.3.1-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   1.8M Mar 11 03:25 dufs_0.45.0-r1_aarch64_generic.ipk
+-rw-r--r-- 1 root  root    13M Mar 11 03:25 easytier_2.4.3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   4.7M Mar 11 03:25 gecoosac_2.2.20250318-r8_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.3M Mar 11 03:25 geoview_0.2.2-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.3M Mar 11 03:25 geoview_0.2.3-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   6.5M Mar 11 03:25 hysteria_2.6.5-r9_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   6.6M Mar 11 03:25 hysteria_2.7.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    26K Mar 11 03:25 ipt2socks_1.1.4-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    26K Mar 11 03:25 ipt2socks_1.1.4-r3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   322K Mar 11 03:25 libmbedtls21_3.6.3-r1_aarch64_generic.ipk
+-rw-r--r-- 1 root  root   1.7M Mar 11 03:25 libopenssl3.ipk
+-rw-r--r-- 1 root  root    21K Mar 11 03:25 libudns_0.4-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   5.3K Mar 11 03:25 lua-neturl_1.2.1-r4_all.ipk
+-rw-r--r-- 1 root  root    92K Mar 11 03:25 luci-app-adguardhome-all.ipk
+-rw-r--r-- 1 root  root    16K Mar 11 03:25 luci-app-advancedplus_1.8.3_all.ipk
+-rw-r--r-- 1 root  root    81K Mar 11 03:25 luci-app-amlogic_3.1.259_all.ipk
+-rw-r--r-- 1 root  root    55K Mar 11 03:25 luci-app-bandix_0.11.1-r1_all.ipk
+-rw-r--r-- 1 root  root    24K Mar 11 03:25 luci-app-easytier_2.4.3_all.ipk
+-rw-r--r-- 1 root  root   8.4K Mar 11 03:25 luci-app-gecoosac_2.2-r15_all.ipk
+-rw-r--r-- 1 root  root   595K Mar 11 03:25 luci-app-homeproxy_25.197.30224-af6a147_all.ipk
+-rw-r--r-- 1 root  root   6.6K Mar 11 03:25 luci-app-lucky_1.2.0-r11_all.ipk
+-rw-r--r-- 1 root  root   6.8K Mar 11 03:25 luci-app-momo_1.1.0-r1_all.ipk
+-rw-r--r-- 1 root  root    90K Mar 11 03:25 luci-app-mosdns_1.6.11-r1_all.ipk
+-rw-r--r-- 1 root  root    13M Mar 11 03:25 luci-app-nekobox_1.9.4-r185_all.ipk
+-rw-r--r-- 1 root  root   8.0K Mar 11 03:25 luci-app-netwizard_1.9.2-r20250330_all.ipk
+-rw-r--r-- 1 root  root    11K Mar 11 03:25 luci-app-nikki_1.25.2-r1_all.ipk
+-rw-r--r-- 1 root  root    15K Mar 11 03:25 luci-app-partexp_2.0.2-r20251221_all.ipk
+-rw-r--r-- 1 root  root   308K Mar 11 03:25 luci-app-passwall2_26.1.16-r1_all.ipk
+-rw-r--r-- 1 root  root   400K Mar 11 03:25 luci-app-quickstart_0.12.4-r1_all.ipk
+-rw-r--r-- 1 root  root   4.9K Mar 11 03:25 luci-app-rtp2httpd_3.6.2-r1_all.ipk
+-rw-r--r-- 1 root  root   569K Mar 11 03:25 luci-app-ssr-plus_190-r126_all.ipk
+-rw-r--r-- 1 root  root   114K Mar 11 03:25 luci-app-store_0.1.32-1_all.ipk
+-rw-r--r-- 1 root  root   9.5K Mar 11 03:25 luci-app-tailscale_1.2.6_all.ipk
+-rw-r--r-- 1 root  root   6.5K Mar 11 03:25 luci-app-taskplan_2.2.4_all.ipk
+-rw-r--r-- 1 root  root   8.4K Mar 11 03:25 luci-app-turboacc_26.165.25287-2b9ee02_all.ipk
+-rw-r--r-- 1 root  root   1.1M Mar 11 03:25 luci-app-uninstall_1.2.0_all.ipk
+-rw-r--r-- 1 root  root   4.0K Mar 11 03:25 luci-app-unishare_1.0.0-r4-r3_all.ipk
+-rw-r--r-- 1 root  root   5.2K Mar 11 03:25 luci-app-watchdog_1.0.6-r20250717_all.ipk
+-rw-r--r-- 1 root  root   4.9K Mar 11 03:25 luci-i18n-advancedplus-zh-cn_git-25.063.43858-4243994_all.ipk
+-rw-r--r-- 1 root  root   5.9K Mar 11 03:25 luci-i18n-amlogic-zh-cn_3.1.259_all.ipk
+-rw-r--r-- 1 root  root   6.9K Mar 11 03:25 luci-i18n-bandix-zh-cn_25.341.50859.dfcede3_all.ipk
+-rw-r--r-- 1 root  root   8.6K Mar 11 03:25 luci-i18n-easytier-zh-cn_git-25.242.01662-2b382e4_all.ipk
+-rw-r--r-- 1 root  root    13K Mar 11 03:25 luci-i18n-homeproxy-zh-cn_25.196.29294-df03cca_all.ipk
+-rw-r--r-- 1 root  root   2.9K Mar 11 03:25 luci-i18n-momo-zh-cn_25.363.32311ce1d6a9_all.ipk
+-rw-r--r-- 1 root  root   5.1K Mar 11 03:25 luci-i18n-mosdns-zh-cn_25.061.23891.2523534_all.ipk
+-rw-r--r-- 1 root  root   2.8K Mar 11 03:25 luci-i18n-netwizard-zh-cn_25.095.57929.603bfe4_all.ipk
+-rw-r--r-- 1 root  root   5.5K Mar 11 03:25 luci-i18n-nikki-ru_26.061.12721980cc7d_all.ipk
+-rw-r--r-- 1 root  root   5.0K Mar 11 03:25 luci-i18n-nikki-zh-cn_26.061.12721980cc7d_all.ipk
+-rw-r--r-- 1 root  root   5.1K Mar 11 03:25 luci-i18n-nikki-zh-tw_26.061.12721980cc7d_all.ipk
+-rw-r--r-- 1 root  root   2.5K Mar 11 03:25 luci-i18n-partexp-zh-cn_25.355.34625.38e15b6_all.ipk
+-rw-r--r-- 1 root  root    19K Mar 11 03:25 luci-i18n-passwall2-zh-cn_26.1.16_all.ipk
+-rw-r--r-- 1 root  root   1.4K Mar 11 03:25 luci-i18n-quickstart-zh-cn_25.090.31208-f5bf244_all.ipk
+-rw-r--r-- 1 root  root   3.6K Mar 11 03:25 luci-i18n-rtp2httpd-zh-cn_3.6.2_all.ipk
+-rw-r--r-- 1 root  root   2.8K Mar 11 03:25 luci-i18n-tailscale-zh-cn_250509.33792_all.ipk
+-rw-r--r-- 1 root  root   2.1K Mar 11 03:25 luci-i18n-taskplan-zh-cn_all.ipk
+-rw-r--r-- 1 root  root   3.6K Mar 11 03:25 luci-i18n-watchdog-zh-cn_25.191.07803.ff47685_all.ipk
+-rw-r--r-- 1 root  root   7.3K Mar 11 03:25 luci-lib-taskd_1.0.25_all.ipk
+-rw-r--r-- 1 root  root    77K Mar 11 03:25 luci-lib-xterm_4.18.0_all.ipk
+-rw-r--r-- 1 root  root    73K Mar 11 03:25 luci-theme-aurora_0.11.0-r20260208_all.ipk
+-rw-r--r-- 1 root  root   980K Mar 11 03:25 luci-theme-kucat_2.6.10-r20250720_all.ipk
+-rw-r--r-- 1 root  root   6.9M Mar 11 03:25 lucky_2.17.8-r8_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   7.1K Mar 11 03:25 microsocks_1.0.5-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   7.2K Mar 11 03:25 microsocks_1.0.5-r3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    81K Mar 11 03:25 momo_2025.12.31-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   6.3M Mar 11 03:25 mosdns_5.3.3-r4_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   6.2M Mar 11 03:25 mosdns_5.3.3-r82_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.5M Mar 11 03:25 naiveproxy_140.0.7339.123-r3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.3M Mar 11 03:25 naiveproxy_143.0.7499.109-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    12M Mar 11 03:25 nikki_2026.02.08-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   4.4M Mar 11 03:25 quickstart_0.11.13-r1_aarch64_generic.ipk
+-rw-r--r-- 1 root  root    58K Mar 11 03:25 redsocks2_0.71-r5_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   240K Mar 11 03:25 rtp2httpd_3.6.2-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   1.5M Mar 11 03:25 shadow-tls_0.2.25-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   1.5M Mar 11 03:25 shadow-tls_0.2.25-r5_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    57K Mar 11 03:25 shadowsocks-libev-ss-server_3.3.5-r7_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.5M Mar 11 03:25 shadowsocks-rust-sslocal_1.24.0-r14_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.5M Mar 11 03:25 shadowsocks-rust-sslocal_1.24.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.8M Mar 11 03:25 shadowsocks-rust-ssmanager_1.24.0-r14_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.7M Mar 11 03:25 shadowsocks-rust-ssserver_1.24.0-r14_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.7M Mar 11 03:25 shadowsocks-rust-ssserver_1.24.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.7M Mar 11 03:25 shadowsocks-rust-ssservice_1.24.0-r14_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   915K Mar 11 03:25 shadowsocks-rust-ssurl_1.24.0-r14_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.3K Mar 11 03:25 shadowsocksr-libev-ssr-check_2.5.6-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    63K Mar 11 03:25 shadowsocksr-libev-ssr-local_2.5.6-r11_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    63K Mar 11 03:25 shadowsocksr-libev-ssr-local_2.5.6-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.0K Mar 11 03:25 shadowsocksr-libev-ssr-nat_2.5.6-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    56K Mar 11 03:25 shadowsocksr-libev-ssr-redir_2.5.6-r11_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    56K Mar 11 03:25 shadowsocksr-libev-ssr-redir_2.5.6-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    66K Mar 11 03:25 shadowsocksr-libev-ssr-server_2.5.6-r11_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    66K Mar 11 03:25 shadowsocksr-libev-ssr-server_2.5.6-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    32K Mar 11 03:25 simple-obfs-client_0.0.5-r3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    32K Mar 11 03:25 simple-obfs-client_0.0.5-r4_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    11M Mar 11 03:25 sing-box_1.11.15-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    15M Mar 11 03:25 sing-box_1.12.16-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   2.4K Mar 11 03:25 taskd_1.0.3-2_all.ipk
+-rw-r--r-- 1 root  root   3.6K Mar 11 03:25 tcping-simple_1.3.5-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   4.3K Mar 11 03:25 tcping_0.3-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   4.4K Mar 11 03:25 tcping_0.3-r5_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   402K Mar 11 03:25 trojan-plus_10.0.3-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   402K Mar 11 03:25 trojan-plus_10.0.3-r7_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   285K Mar 11 03:25 trojan_1.16.0-r6_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root  1019K Mar 11 03:25 tuic-client_1.0.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root  1019K Mar 11 03:25 tuic-client_1.0.0-r3_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   3.3K Mar 11 03:25 unishare_1.1.0-r6_all.ipk
+-rw-r--r-- 1 root  root   2.2M Mar 11 03:25 v2dat_2022.12.15.47b8ee51-r2_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    62K Mar 11 03:25 v2ray-geoip_2025.03.08-r1_all.ipk
+-rw-r--r-- 1 root  root   4.0M Mar 11 03:25 v2ray-geoip_202601080023.1_all.ipk
+-rw-r--r-- 1 root  root   4.0M Mar 11 03:25 v2ray-geoip_202601150021.1_all.ipk
+-rw-r--r-- 1 root  root   2.6M Mar 11 03:25 v2ray-geosite_2025.03.08-r1_all.ipk
+-rw-r--r-- 1 root  root   2.9M Mar 11 03:25 v2ray-geosite_202601112214.1_all.ipk
+-rw-r--r-- 1 root  root   3.0M Mar 11 03:25 v2ray-geosite_202601152216.1_all.ipk
+-rw-r--r-- 1 root  root   5.6M Mar 11 03:25 v2ray-plugin_5.41.0-r10_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   5.6M Mar 11 03:25 v2ray-plugin_5.43.0-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   9.1K Mar 11 03:25 watchdog_1-r4_aarch64_generic.ipk
+-rw-r--r-- 1 root  root   3.6M Mar 11 03:25 webdav2_4.3.1-r4_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   9.8M Mar 11 03:25 xray-core_25.12.8-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   9.8M Mar 11 03:25 xray-core_25.12.8-r35_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root    10M Mar 11 03:25 xray-core_26.1.13-r1_aarch64_cortex-a53.ipk
+-rw-r--r-- 1 root  root   6.4M Mar 11 03:25 xray-plugin_1.8.24-r1_aarch64_cortex-a53.ipk
+✅ 已选择 luci-app-openclash，添加 openclash core
+clash
+2026-03-11 03:25:40 - Building image with the following packages:
+ curl fdisk luci-i18n-diskman-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-firewall-zh-cn luci-i18n-filebrowser-go-zh-cn luci-theme-argon luci-app-argon-config luci-i18n-argon-config-zh-cn luci-i18n-ttyd-zh-cn xray-core hysteria luci-i18n-passwall-zh-cn luci-app-openclash luci-i18n-homeproxy-zh-cn openssh-sftp-server luci-i18n-filemanager-zh-cn kmod-brcmfmac wpad-basic-mbedtls iw iwinfo perlbase-base perlbase-file perlbase-time perlbase-utf8 perlbase-xsloader  luci-app-amlogic luci-i18n-amlogic-zh-cn
+Generate local signing keys...
+Generate local certificate...
+Checking 'true'... ok.
+Checking 'false'... ok.
+Checking 'working-make'... ok.
+Checking 'case-sensitive-fs'... ok.
+Checking 'proper-umask'... ok.
+Checking 'perl-data-dumper'... ok.
+Checking 'perl-findbin'... ok.
+Checking 'perl-file-copy'... ok.
+Checking 'perl-file-compare'... ok.
+Checking 'perl-thread-queue'... ok.
+Checking 'perl-ipc-cmd'... ok.
+Checking 'tar'... ok.
+Checking 'find'... ok.
+Checking 'bash'... updated.
+Checking 'xargs'... ok.
+Checking 'patch'... ok.
+Checking 'diff'... ok.
+Checking 'cp'... updated.
+Checking 'seq'... ok.
+Checking 'awk'... ok.
+Checking 'grep'... updated.
+Checking 'egrep'... updated.
+Checking 'getopt'... ok.
+Checking 'realpath'... ok.
+Checking 'stat'... ok.
+Checking 'gzip'... updated.
+Checking 'unzip'... ok.
+Checking 'bzip2'... ok.
+Checking 'wget'... ok.
+Checking 'install'... ok.
+Checking 'perl'... ok.
+Checking 'python'... ok.
+Checking 'python3'... ok.
+Checking 'python3-distutils'... ok.
+Checking 'python3-stdlib'... ok.
+Checking 'file'... ok.
+Checking 'which'... ok.
+Checking 'ldconfig-stub'... ok.
+Building images for armsr - Generic EFI Boot
+Packages: curl fdisk luci-i18n-diskman-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-firewall-zh-cn luci-i18n-filebrowser-go-zh-cn luci-theme-argon luci-app-argon-config luci-i18n-argon-config-zh-cn luci-i18n-ttyd-zh-cn xray-core hysteria luci-i18n-passwall-zh-cn luci-app-openclash luci-i18n-homeproxy-zh-cn openssh-sftp-server luci-i18n-filemanager-zh-cn kmod-brcmfmac wpad-basic-mbedtls iw iwinfo perlbase-base perlbase-file perlbase-time perlbase-utf8 perlbase-xsloader luci-app-amlogic luci-i18n-amlogic-zh-cn autocore automount base-files blkid block-mount ca-bundle default-settings-chn dnsmasq-full dropbear e2fsprogs firewall4 fstools kernel kmod-amazon-ena kmod-atlantic kmod-bcmgenet kmod-dwmac-imx kmod-dwmac-rockchip kmod-dwmac-sun8i kmod-e1000e kmod-fs-vfat kmod-fsl-dpaa1-net kmod-fsl-dpaa2-net kmod-fsl-enetc-net kmod-fsl-fec kmod-gpio-pca953x kmod-i2c-mux-pca954x kmod-mvneta kmod-mvpp2 kmod-nf-nathelper kmod-nf-nathelper-extra kmod-nft-offload kmod-octeontx2-net kmod-phy-aquantia kmod-phy-broadcom kmod-phy-marvell kmod-phy-marvell-10g kmod-phy-realtek kmod-phy-smsc kmod-renesas-net-avb kmod-rtc-rx8025 kmod-sfp kmod-vmxnet3 kmod-wdt-sp805 libc libgcc libustream-openssl logd luci-app-package-manager luci-compat luci-lib-base luci-lib-ipkg luci-light mkf2fs mtd netifd nftables odhcp6c odhcpd-ipv6only opkg partx-utils ppp ppp-mod-pppoe procd-ujail uci uclient-fetch urandom-seed urngd
+
+Package list missing or not up-to-date, generating it.
+
+Building package index...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_core
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_base
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_kmods
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_luci
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_packages
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/routing/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_routing
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/routing/Packages.sig
+Signature check passed.
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/telephony/Packages.gz
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/immortalwrt_telephony
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/telephony/Packages.sig
+Signature check passed.
+Downloading file:packages/Packages
+Updated list of available packages in /home/build/immortalwrt/build_dir/target-aarch64_generic_musl/root-armsr/../../../../../../home/build/immortalwrt/dl/imagebuilder
+Downloading file:packages/Packages.sig
+Signature check passed.
+
+Installing packages...
+Installing libc (1.2.5-r4) to root...
+Installing libgcc1 (13.3.0-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/libgcc1_13.3.0-r4_aarch64_generic.ipk
+Configuring libgcc1.
+Configuring libc.
+Installing kernel (6.6.122~07f627a3918c58c773f85279718bb442-r1) to root...
+Configuring kernel.
+Installing curl (8.12.1-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/curl_8.12.1-r1_aarch64_generic.ipk
+Installing libopenssl3 (3.0.19-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libopenssl3_3.0.19-r1_aarch64_generic.ipk
+Installing libpthread (1.2.5-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/libpthread_1.2.5-r4_aarch64_generic.ipk
+Installing libnghttp2-14 (1.63.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libnghttp2-14_1.63.0-r1_aarch64_generic.ipk
+Installing ca-bundle (20250419-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ca-bundle_20250419-r1_all.ipk
+Installing libcurl4 (8.12.1-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libcurl4_8.12.1-r1_aarch64_generic.ipk
+Installing fdisk (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/fdisk_2.40.2-r1_aarch64_generic.ipk
+Installing librt (1.2.5-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/librt_1.2.5-r4_aarch64_generic.ipk
+Installing libuuid1 (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libuuid1_2.40.2-r1_aarch64_generic.ipk
+Installing libblkid1 (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libblkid1_2.40.2-r1_aarch64_generic.ipk
+Installing libsmartcols1 (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libsmartcols1_2.40.2-r1_aarch64_generic.ipk
+Installing libfdisk1 (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libfdisk1_2.40.2-r1_aarch64_generic.ipk
+Installing terminfo (6.4-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/terminfo_6.4-r2_aarch64_generic.ipk
+Installing libncurses6 (6.4-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libncurses6_6.4-r2_aarch64_generic.ipk
+Installing luci-i18n-diskman-zh-cn (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-diskman-zh-cn_25.306.51720~a833d72_all.ipk
+Installing libubox20240329 (2025.07.23~49056d17-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libubox20240329_2025.07.23~49056d17-r1_aarch64_generic.ipk
+Installing libubus20250102 (2025.10.17~60e04048-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libubus20250102_2025.10.17~60e04048-r1_aarch64_generic.ipk
+Installing libuci20250120 (2025.01.20~16ff0bad-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libuci20250120_2025.01.20~16ff0bad-r1_aarch64_generic.ipk
+Installing libjson-c5 (0.18-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libjson-c5_0.18-r1_aarch64_generic.ipk
+Installing libblobmsg-json20240329 (2025.07.23~49056d17-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libblobmsg-json20240329_2025.07.23~49056d17-r1_aarch64_generic.ipk
+Installing rpcd (2025.09.01~bba95191-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/rpcd_2025.09.01~bba95191-r1_aarch64_generic.ipk
+Installing rpcd-mod-file (2025.09.01~bba95191-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/rpcd-mod-file_2025.09.01~bba95191-r1_aarch64_generic.ipk
+Installing libnl-tiny1 (2025.03.19~c0df580a-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libnl-tiny1_2025.03.19~c0df580a-r1_aarch64_generic.ipk
+Installing rpcd-mod-luci (20240305-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/rpcd-mod-luci_20240305-r1_aarch64_generic.ipk
+Installing libucode20230711 (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libucode20230711_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing rpcd-mod-ucode (2025.09.01~bba95191-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/rpcd-mod-ucode_2025.09.01~bba95191-r1_aarch64_generic.ipk
+Installing cgi-io (2022.08.10~901b0f04-r21) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/cgi-io_2022.08.10~901b0f04-r21_aarch64_generic.ipk
+Installing ucode (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing ucode-mod-fs (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode-mod-fs_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing ucode-mod-uci (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode-mod-uci_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing ucode-mod-ubus (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode-mod-ubus_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing ucode-mod-math (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode-mod-math_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing ucode-mod-html (1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/ucode-mod-html_1_aarch64_generic.ipk
+Installing liblucihttp0 (2023.03.15~9b5b683f-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/liblucihttp0_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing liblucihttp-ucode (2023.03.15~9b5b683f-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/liblucihttp-ucode_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing luci-base (26.036.36217~e5298af) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-base_26.036.36217~e5298af_aarch64_generic.ipk
+Installing liblua5.1.5 (5.1.5-r11) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/liblua5.1.5_5.1.5-r11_aarch64_generic.ipk
+Installing lua (5.1.5-r11) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/lua_5.1.5-r11_aarch64_generic.ipk
+Installing luci-lib-nixio (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-lib-nixio_25.306.51720~a833d72_aarch64_generic.ipk
+Installing luci-lib-ip (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-lib-ip_25.306.51720~a833d72_aarch64_generic.ipk
+Installing luci-lib-jsonc (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-lib-jsonc_25.306.51720~a833d72_aarch64_generic.ipk
+Installing liblucihttp-lua (2023.03.15~9b5b683f-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/liblucihttp-lua_2023.03.15~9b5b683f-r1_aarch64_generic.ipk
+Installing luci-lib-base (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-lib-base_25.306.51720~a833d72_all.ipk
+Installing libubus-lua (2025.10.17~60e04048-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libubus-lua_2025.10.17~60e04048-r1_aarch64_generic.ipk
+Installing ucode-mod-lua (1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/ucode-mod-lua_1_aarch64_generic.ipk
+Installing luci-lua-runtime (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-lua-runtime_25.306.51720~a833d72_aarch64_generic.ipk
+Installing luci-compat (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-compat_25.306.51720~a833d72_all.ipk
+Installing blkid (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/blkid_2.40.2-r1_aarch64_generic.ipk
+Installing libcomerr0 (1.47.0-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libcomerr0_1.47.0-r2_aarch64_generic.ipk
+Installing libss2 (1.47.0-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libss2_1.47.0-r2_aarch64_generic.ipk
+Installing libext2fs2 (1.47.0-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libext2fs2_1.47.0-r2_aarch64_generic.ipk
+Installing libe2p2 (1.47.0-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libe2p2_1.47.0-r2_aarch64_generic.ipk
+Installing e2fsprogs (1.47.0-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/e2fsprogs_1.47.0-r2_aarch64_generic.ipk
+Installing libparted (3.6-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libparted_3.6-r1_aarch64_generic.ipk
+Installing libreadline8 (8.2-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libreadline8_8.2-r2_aarch64_generic.ipk
+Installing parted (3.6-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/parted_3.6-r1_aarch64_generic.ipk
+Installing libstdcpp6 (13.3.0-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/packages/libstdcpp6_13.3.0-r4_aarch64_generic.ipk
+Installing smartmontools (7.4-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/smartmontools_7.4-r1_aarch64_generic.ipk
+Installing dosfstools (4.2-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/dosfstools_4.2-r4_aarch64_generic.ipk
+Installing kmod-nls-base (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-base_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nls-cp437 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-cp437_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nls-iso8859-1 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-iso8859-1_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nls-utf8 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-utf8_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-fs-vfat (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-fs-vfat_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-fs-msdos (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-fs-msdos_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-fs-ntfs3 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-fs-ntfs3_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-fs-exfat (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-fs-exfat_6.6.122-r1_aarch64_generic.ipk
+Installing exfat-mkfs (1.2.5-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/exfat-mkfs_1.2.5-r1_aarch64_generic.ipk
+Installing exfat-fsck (1.2.5-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/exfat-fsck_1.2.5-r1_aarch64_generic.ipk
+Installing kmod-nls-cp932 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-cp932_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nls-cp936 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-cp936_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nls-cp950 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nls-cp950_6.6.122-r1_aarch64_generic.ipk
+Installing libattr (2.5.2-r3) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libattr_2.5.2-r3_aarch64_generic.ipk
+Installing libmount1 (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libmount1_2.40.2-r1_aarch64_generic.ipk
+Installing zlib (1.3.1-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/zlib_1.3.1-r1_aarch64_generic.ipk
+Installing liblzo2 (2.10-r4) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/liblzo2_2.10-r4_aarch64_generic.ipk
+Installing kmod-crypto-hash (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-crypto-hash_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-crypto-crc32c (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-crypto-crc32c_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-crc32c (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-crc32c_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-crypto-acompress (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-crypto-acompress_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-lzo (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-lzo_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-zlib-inflate (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-zlib-inflate_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-zlib-deflate (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-zlib-deflate_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-raid6 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-raid6_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-xor (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-xor_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-xxhash (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-xxhash_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-lib-zstd (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-lib-zstd_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-crypto-blake2b (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-crypto-blake2b_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-crypto-xxhash (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-crypto-xxhash_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-fs-btrfs (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-fs-btrfs_6.6.122-r1_aarch64_generic.ipk
+Installing btrfs-progs (6.11-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/btrfs-progs_6.11-r1_aarch64_generic.ipk
+Installing lsblk (2.40.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/lsblk_2.40.2-r1_aarch64_generic.ipk
+Installing luci-app-diskman (0.2.13-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-diskman_0.2.13-r1_all.ipk
+Installing luci-i18n-package-manager-zh-cn (26.030.72349~cfd9f87) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-package-manager-zh-cn_26.030.72349~cfd9f87_all.ipk
+Installing luci-app-package-manager (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-package-manager_25.306.51720~a833d72_all.ipk
+Installing luci-i18n-firewall-zh-cn (26.036.36217~e5298af) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-firewall-zh-cn_26.036.36217~e5298af_all.ipk
+Installing kmod-nfnetlink (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nfnetlink_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-reject (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-reject_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-reject6 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-reject6_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-conntrack_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack6 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-conntrack6_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-nat (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-nat_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-log (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-log_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-log6 (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-log6_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-core (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-core_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-fib (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-fib_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-flow (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-flow_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-nat (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-nat_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-offload (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-offload_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-fullcone (6.6.122.2023.05.17~07d93b62-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-fullcone_6.6.122.2023.05.17~07d93b62-r2_aarch64_generic.ipk
+Installing libmnl0 (1.0.5-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libmnl0_1.0.5-r1_aarch64_generic.ipk
+Installing libnftnl11 (1.2.8-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libnftnl11_1.2.8-r1_aarch64_generic.ipk
+Installing jansson4 (2.14-r3) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/jansson4_2.14-r3_aarch64_generic.ipk
+Installing nftables-json (1.1.1-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/nftables-json_1.1.1-r1_aarch64_generic.ipk
+Installing firewall4 (2024.12.18~18fc0ead-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/firewall4_2024.12.18~18fc0ead-r1_aarch64_generic.ipk
+Installing luci-app-firewall (26.036.36217~e5298af) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-firewall_26.036.36217~e5298af_all.ipk
+Installing luci-i18n-filebrowser-go-zh-cn (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-filebrowser-go-zh-cn_25.306.51720~a833d72_all.ipk
+Installing filebrowser (2.43.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/filebrowser_2.43.0-r1_aarch64_generic.ipk
+Installing luci-app-filebrowser-go (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-filebrowser-go_25.306.51720~a833d72_all.ipk
+Installing luci-theme-argon (2.4.3-r20250722) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-theme-argon_2.4.3-r20250722_all.ipk
+Installing libuclient20201210 (2024.10.22~88ae8f20-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libuclient20201210_2024.10.22~88ae8f20-r1_aarch64_generic.ipk
+Installing uclient-fetch (2024.10.22~88ae8f20-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/uclient-fetch_2024.10.22~88ae8f20-r1_aarch64_generic.ipk
+Installing jsonfilter (2025.04.18~8a86fb78-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/jsonfilter_2025.04.18~8a86fb78-r1_aarch64_generic.ipk
+Installing luci-app-argon-config (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-argon-config_25.306.51720~a833d72_all.ipk
+Installing luci-i18n-argon-config-zh-cn (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-argon-config-zh-cn_25.306.51720~a833d72_all.ipk
+Installing luci-i18n-ttyd-zh-cn (26.030.72349~cfd9f87) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-ttyd-zh-cn_26.030.72349~cfd9f87_all.ipk
+Installing libcap (2.69-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libcap_2.69-r1_aarch64_generic.ipk
+Installing libuv1 (1.48.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libuv1_1.48.0-r1_aarch64_generic.ipk
+Installing libwebsockets-full (4.3.3-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libwebsockets-full_4.3.3-r1_aarch64_generic.ipk
+Installing ttyd (1.7.3-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ttyd_1.7.3-r1_aarch64_generic.ipk
+Installing luci-app-ttyd (25.306.51720~a833d72) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-ttyd_25.306.51720~a833d72_all.ipk
+Installing xray-core (26.1.13-r1) to root...
+Downloading file:packages/xray-core_26.1.13-r1_aarch64_cortex-a53.ipk
+Installing hysteria (2.7.0-r1) to root...
+Downloading file:packages/hysteria_2.7.0-r1_aarch64_cortex-a53.ipk
+Installing luci-i18n-passwall-zh-cn (26.2.6) to root...
+Downloading file:packages/23.05-24.10_luci-i18n-passwall-zh-cn_26.2.6_all.ipk
+Installing coreutils (9.7-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/coreutils_9.7-r1_aarch64_generic.ipk
+Installing coreutils-base64 (9.7-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/coreutils-base64_9.7-r1_aarch64_generic.ipk
+Installing coreutils-nohup (9.7-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/coreutils-nohup_9.7-r1_aarch64_generic.ipk
+Installing chinadns-ng (2025.08.09-r13) to root...
+Downloading file:packages/chinadns-ng_2025.08.09-r13_aarch64_cortex-a53.ipk
+Installing dns2socks (2.1-r4) to root...
+Downloading file:packages/dns2socks_2.1-r4_aarch64_cortex-a53.ipk
+Installing libgmp10 (6.3.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libgmp10_6.3.0-r1_aarch64_generic.ipk
+Installing libnettle8 (3.9.1-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libnettle8_3.9.1-r1_aarch64_generic.ipk
+Installing libnfnetlink0 (1.0.2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libnfnetlink0_1.0.2-r1_aarch64_generic.ipk
+Installing kmod-nf-conntrack-netlink (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-conntrack-netlink_6.6.122-r1_aarch64_generic.ipk
+Installing libnetfilter-conntrack3 (1.0.9-r2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libnetfilter-conntrack3_1.0.9-r2_aarch64_generic.ipk
+Installing dnsmasq-full (2.90-r5) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/dnsmasq-full_2.90-r5_aarch64_generic.ipk
+Installing libelf1 (0.192-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libelf1_0.192-r1_aarch64_generic.ipk
+Installing libbpf1 (1.5.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libbpf1_1.5.0-r1_aarch64_generic.ipk
+Installing ip-full (6.11.0-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ip-full_6.11.0-r1_aarch64_generic.ipk
+Installing libuci-lua (2025.01.20~16ff0bad-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libuci-lua_2025.01.20~16ff0bad-r1_aarch64_generic.ipk
+Installing microsocks (1.0.5-r3) to root...
+Downloading file:packages/microsocks_1.0.5-r3_aarch64_cortex-a53.ipk
+Installing resolveip (2) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/resolveip_2_aarch64_generic.ipk
+Installing tcping (2020.07.04~db910183-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/tcping_2020.07.04~db910183-r1_aarch64_generic.ipk
+Installing luci-app-passwall (26.2.6-r1) to root...
+Downloading file:packages/23.05-24.10_luci-app-passwall_26.2.6-r1_all.ipk
+Installing luci-app-openclash (0.47.055) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-openclash_0.47.055_all.ipk
+Installing bash (5.2.37-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/bash_5.2.37-r1_aarch64_generic.ipk
+Installing libruby3.3 (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libruby3.3_3.3.10-r1_aarch64_generic.ipk
+Installing ruby (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-digest (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-digest_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-enc (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-enc_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-pstore (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-pstore_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-bigdecimal (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-bigdecimal_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-date (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-date_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-stringio (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-stringio_3.3.10-r1_aarch64_generic.ipk
+Installing libyaml (0.2.5-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/libyaml_0.2.5-r1_aarch64_generic.ipk
+Installing ruby-psych (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-psych_3.3.10-r1_aarch64_generic.ipk
+Installing ruby-yaml (3.3.10-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/ruby-yaml_3.3.10-r1_aarch64_generic.ipk
+Installing kmod-inet-diag (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-inet-diag_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nf-tproxy (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nf-tproxy_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-nft-tproxy (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-nft-tproxy_6.6.122-r1_aarch64_generic.ipk
+Installing kmod-tun (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-tun_6.6.122-r1_aarch64_generic.ipk
+Installing unzip (6.0-r8) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/unzip_6.0-r8_aarch64_generic.ipk
+Installing luci-i18n-homeproxy-zh-cn (25.318.34996~d3f7643) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-homeproxy-zh-cn_25.318.34996~d3f7643_all.ipk
+Installing kmod-netlink-diag (6.6.122-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-netlink-diag_6.6.122-r1_aarch64_generic.ipk
+Installing sing-box (1.12.17-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/sing-box_1.12.17-r1_aarch64_generic.ipk
+Installing ucode-mod-digest (2025.07.18~3f64c808-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ucode-mod-digest_2025.07.18~3f64c808-r1_aarch64_generic.ipk
+Installing luci-app-homeproxy (25.318.35044~0706fa8) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-homeproxy_25.318.35044~0706fa8_all.ipk
+Installing openssh-sftp-server (9.9_p2-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/packages/openssh-sftp-server_9.9_p2-r1_aarch64_generic.ipk
+Installing luci-i18n-filemanager-zh-cn (26.030.72349~cfd9f87) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-i18n-filemanager-zh-cn_26.030.72349~cfd9f87_all.ipk
+Installing luci-app-filemanager (25.336.82137~f4c9919) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/luci/luci-app-filemanager_25.336.82137~f4c9919_all.ipk
+Installing kmod-brcmfmac (6.6.122.6.12.61-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/targets/armsr/armv8/kmods/6.6.122-1-07f627a3918c58c773f85279718bb442/kmod-brcmfmac_6.6.122.6.12.61-r1_aarch64_generic.ipk
+Installing iw (6.9-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/iw_6.9-r1_aarch64_generic.ipk
+Installing libiwinfo-data (2024.10.20~b94f066e-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libiwinfo-data_2024.10.20~b94f066e-r1_aarch64_generic.ipk
+Installing libiwinfo20230701 (2024.10.20~b94f066e-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/libiwinfo20230701_2024.10.20~b94f066e-r1_aarch64_generic.ipk
+Installing iwinfo (2024.10.20~b94f066e-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/iwinfo_2024.10.20~b94f066e-r1_aarch64_generic.ipk
+Installing ubusd (2025.10.17~60e04048-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ubusd_2025.10.17~60e04048-r1_aarch64_generic.ipk
+Installing ubus (2025.10.17~60e04048-r1) to root...
+Downloading https://downloads.immortalwrt.org/releases/24.10.5/packages/aarch64_generic/base/ubus_2025.10.17~60e04048-r1_aarch64_generic.ipk
+Installing jshn (2025.07.23~49056d17-r1) to root...
+Downloading https://downloads.immortalwrt.org/rel
